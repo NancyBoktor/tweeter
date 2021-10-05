@@ -1,0 +1,6 @@
+         <spin class="Question">What are you humming about?</spin>
+         <hr style="width:100%">
+         <div class="tweet" >
+            <div class="action"><span>Tweet</span> </div> 
+            <spin>140</spin>
+         </div>

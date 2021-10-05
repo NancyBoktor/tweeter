@@ -1,29 +1,89 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+   <head>
+      <!-- Meta Information -->
+      <title>Tweeter - Home Page</title>
+      
+      <!-- External font style -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+      <!-- External CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+      
+      <!-- App CSS -->
+      <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+      <link rel="stylesheet" href="styles/nav.css" type="text/css"/>
+      <link rel="stylesheet" href="styles/header.css" type="text/css" />
+      <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" /> 
+      
+        <!-- External JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+      
+      <!-- App JS -->
+      <script type="text/javascript" src="/scripts/client.js"></script>
+      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+   </head>
+   <body>
+      <!-- Top nav bar (fixed) -->
+      <nav>
+         <span id="title">tweeter</span>
+         <div id="nav-right">        
+            <span>  <span id="right-nav-write">Write </span> <span id="right-nav-new-tweet">a new tweet</span> </span>
+            <i class="fa-solid fa-angles-down nav-icon" ></i>
+         </div>
+      </nav>
+      <header id="header">
+        <div>
+          <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div>
+          <h2>Nancy Boktor</h2>
+        </div>
+      </header>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+      <section class="new-tweet">
+         <form class= "main-form" action="/tweets/" method="POST">
+            <label for="tweet-text" class="Question">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="main-div">
+               <button type="submit" class="action">Tweet</button>
+               <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+         </form>
+      </section>
+   <!-- tweet box -->
+      <section >
+        <form>
+        <article class="tweets container">
+          <header>
+             <div class="user"> 
+                <h6>Newton</h6>
+               <img src="avatar.png" alt="Avatar" class="avatar">
+            </div>
+            <div clas="@user"><h6>@Newton</h6></div>
+          </header>
+          <div><h5>write your tweet here!!</h5></div>
+          
+          <footer>
+             <div>days</div>
+             <div>hover state</div>
+          </footer>
+        </article>
+      </section >
+      </form>
+      </main>
+   </body>
 </html>
+
