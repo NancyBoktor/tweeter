@@ -1,4 +1,4 @@
-section {
+.new_tweet {
   width: 100%;
   margin: auto;
   display: flex;
@@ -43,5 +43,44 @@ main .action {
   padding: 5px;
 }
 
+.tweet_box {
+  width: 100%;
+  height: fit-content;
+  margin: 60px;
+}
 
+.tweets_container {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.tweetbox_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.mypost {
+  border-bottom: solid;
+  padding-bottom: 0px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.tweetbox_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hover_state {
+  size: 5px;
+}
