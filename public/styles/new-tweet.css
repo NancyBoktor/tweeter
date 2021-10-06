@@ -27,14 +27,24 @@
 }
 
 #tweet-text {
+  background: transparent;
+  width: 100%;
+  border-bottom: 2px solid;
+  border-top: unset;
+  border-right: 0px;
+  border-left: unset;
+  resize: none;
 }
-
+#tweet-text:focus {
+  outline: none;
+}
 .main-div {
   width: 100%;
   font-family: Bungee, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 18px;
 }
 
 main .action {
@@ -45,28 +55,38 @@ main .action {
 
 .tweet_box {
   width: 100%;
-  height: fit-content;
-  margin: 60px;
 }
 
 .tweets_container {
+  margin: auto;
+  margin-top: 60px;
   border: solid;
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 225px;
 }
 
 .tweetbox_header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .user {
+  font-family: "Open Sans Condensed", sans-serif;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
 }
+
+.atuser {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: rgb(169, 184, 230);
+}
+
 .mypost {
   border-bottom: solid;
   padding-bottom: 0px;
@@ -79,8 +99,16 @@ main .action {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 17px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 7px;
 }
 
 .hover_state {
   size: 5px;
+  color: #4056a1;
+}
+.hover_state i:hover {
+  color: rgb(211, 148, 236);
 }
