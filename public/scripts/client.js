@@ -8,13 +8,18 @@ $(() => {
     $.ajax({
       url: "/tweets",
       method: "GET",
+      dataType: "json",
       success: function (tweets) {
         console.log("data:", tweets);
         renderTweets(tweets);
       },
+      error: (err) => {
+        console.log(`there is an error:${err}`);
+      },
     });
   };
   loadTweets();
+
   const createTweetElement = function (tweet) {
     return `<article class="tweets_container">
           <header class="tweetbox_header">
@@ -37,6 +42,8 @@ $(() => {
   };
 
   const renderTweets = function (tweets) {
+    const $tweet_box = $(".tweet_box");
+    $tweet_box.empty();
     for (const tweet of tweets) {
       const tweetDiv = createTweetElement(tweet);
       $(".tweet_box").append(tweetDiv);
@@ -46,14 +53,21 @@ $(() => {
   $(".main-form").submit(function (event) {
     event.preventDefault();
     console.log($(this).serialize());
-
-    $.ajax({ url: "/tweets", method: "POST", data: $(this).serialize() }).then(
-      function (res) {
-        console.log("Success: ", res);
-        const tweets = loadTweets();
-        console.log(tweets);
-        renderTweets(tweets);
-      }
-    );
+    // const userData={name:"Nancy",
+    // avatar:" "
+    // handle:" "
+    // }
+    // const data = $(this).serialize()
+    // data.user =userData
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize(),
+    }).then(function (res) {
+      console.log("Success: ", res);
+      const tweets = loadTweets();
+      console.log(tweets);
+      renderTweets(tweets);
+    });
   });
 });
