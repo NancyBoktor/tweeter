@@ -27,12 +27,15 @@
       
         <!-- External JS -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+         integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
       
       <!-- App JS -->
       <script type="text/javascript" src="/scripts/client.js"></script>
       <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+     
 
 
    </head>
@@ -61,31 +64,31 @@
          <form class= "main-form" action="/tweets/" method="POST">
             <textarea  maxlength="140" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
             <div class="main-div">
-               <button type="submit" class="action">Tweet</button>
+               <button type="submit" id="tweetButton">Tweet</button>
                <output name="counter" id="counter" for="tweet-text">140</output>
             </div>
          </form>
       </section>
    <!-- tweet box -->
       <section class="tweet_box"> 
-        <article class="tweets_container">
+        <!-- <article class="tweets_container">
           <header class="tweetbox_header">
              <div class="user"> 
-                <h5>Newton</h5>
-               <img src="https://i.imgur.com/73hZDYK.png" alt="">
+                <h5 id="name">Newton</h5>
+                <img class="userImage" src="https://i.imgur.com/73hZDYK.png" alt="">
             </div>
-            <div class="atuser"><h5>@Newton</h5></div>
+            <div class="atUserName"><h5>@Newton</h5></div>
           </header>
-          <div class="mypost"><h5>write your tweet here!!</h5></div> 
+          <div class="myPost"><h5>write your tweet here!!</h5></div> 
           <footer class="tweetbox_footer">
-             <div class="fordays">days</div>
+             <div class="forDays">days</div>
              <div class="hover_state">
                <i class="fas fa-flag"></i>
                <i class="fas fa-retweet"></i>
                <i class="fas fa-heart"></i>
              </div>
           </footer>
-        </article>
+        </article> -->
       </section >
   
       </main>

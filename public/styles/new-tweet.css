@@ -47,7 +47,7 @@
   margin-top: 18px;
 }
 
-main .action {
+#tweetButton {
   background-color: #4056a1;
   color: #ffffff;
   padding: 5px;
@@ -82,12 +82,12 @@ main .action {
   align-items: center;
 }
 
-.atuser {
+.atUser {
   font-family: "Open Sans Condensed", sans-serif;
   color: rgb(169, 184, 230);
 }
 
-.mypost {
+.myPost {
   border-bottom: solid;
   padding-bottom: 0px;
   margin-left: 1em;
