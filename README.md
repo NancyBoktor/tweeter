@@ -12,7 +12,8 @@ TweeterApp is displayed on desktop :
 TweeterApp is displayed on Tablet :
 !["Tweetapp_tablet"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_tablet.png?raw=true)
 
-TweeterApp is alerting that your post's character is more than allowable when you press the tweet button.
+TweeterApp is alerting that your post's character is more than allowable 
+when you press the tweet button.
 !["Tweetapp_maxCharcterAlert"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_maxCharcterAlert.png?raw=true)
 
 Tweetapp is alerting that you pressed the tweet button without typing your post or you typed "".
