@@ -10,6 +10,7 @@ TweeterApp is displayed on desktop :
 !["Tweetapp_desktop"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_desktop.png?raw=true)
 
 TweeterApp is displayed on Tablet :
+
 !["Tweetapp_tablet"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_tablet.png?raw=true)
 
 TweeterApp is alerting that your post's character is more than allowable when you press the tweet button.

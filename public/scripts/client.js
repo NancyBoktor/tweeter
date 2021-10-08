@@ -91,6 +91,7 @@ const createTweetElement = function (tweet) {
 //showing up the tweet box for all users and all tweets
 const renderTweets = function (tweets) {
   const $tweet_box = $(".tweet_box");
+  $tweet_box.empty();
   for (const tweet of tweets) {
     const tweetDiv = createTweetElement(tweet);
     $(".tweet_box").prepend(tweetDiv);
