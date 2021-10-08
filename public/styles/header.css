@@ -19,14 +19,14 @@
 }
 #myName {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* for desktop display */
 @media screen and (min-width: 1024px) {
   #header {
     height: 50%;
-    width: 20%;
+    width: 30%;
     margin-left: 50px;
     margin-right: 60px;
     margin-bottom: 200px;
@@ -36,7 +36,6 @@
     height: auto;
     width: 70%;
     margin-top: 20px;
-    max-width: 200px;
   }
 }
 
