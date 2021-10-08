@@ -40,4 +40,6 @@ nav {
 
 .nav-icon {
   color: red;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }

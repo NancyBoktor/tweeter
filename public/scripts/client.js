@@ -11,10 +11,8 @@ $(document).ready(function () {
       method: "GET",
       dataType: "json",
       success: function (tweets) {
-        console.log("data:", tweets);
         renderTweets(tweets);
       },
-
       error: (err) => {
         console.log(`there is an error:${err}`);
       },
@@ -37,23 +35,25 @@ $(document).ready(function () {
       $("#alert").css("display", "flex");
 
       return;
-    } else if (tweetValue === "" || tweetValue === null) {
-      $("#alert").css("display", "flex");
+    } else if (tweetValue === '""' || tweetValue === null) {
+      $("#alert2").css("display", "flex");
+
+      return;
     } else {
+      // hide the alert
+      $("#alert").css("display", "none");
+      $("#alert2").css("display", "none");
+
       // if the conditions false then we will submit the tweet for the user using AJAX
       $.ajax({
         url: "/tweets",
-
         method: "POST",
-
         //convert data to response
         data: $(this).serialize(),
       }).then(function (res) {
-        console.log("Success: ", res);
-
         const tweets = loadTweets();
-
-        renderTweets(tweets);
+        const newTweet = tweets[0];
+        renderTweets([newTweet]);
       });
     }
   });
@@ -61,25 +61,22 @@ $(document).ready(function () {
 
 //Making the HTML tweet box dynamic for every single user
 const createTweetElement = function (tweet) {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   return `<article class="tweets_container">
-
           <header class="tweetbox_header">
-
              <div class="user"> 
                 <h5 id="name">${tweet.user.name}</h5>
                 <img class="userImage" src=${tweet.user.avatars} alt="">
             </div>
-            
             <div class="atUserName"><h5>${tweet.user.handle}</h5></div>
-
           </header>
-
-          <div class="myPost"><h5>${tweet.content.text}</h5></div> 
-
+          <div class="myPost"><h5>${escape(tweet.content.text)}</h5></div> 
           <footer class="tweetbox_footer">
-
-             <div class="forDays">${timeago.format(tweet.createdAt)} </div>
-
+             <div class="forDays">${timeago.format(tweet.created_at)} </div>
              <div class="hover_state">
                <i class="fas fa-flag"></i>
                <i class="fas fa-retweet"></i>
@@ -91,15 +88,11 @@ const createTweetElement = function (tweet) {
         </article>`;
 };
 
-//showing up the tweet box for all users
+//showing up the tweet box for all users and all tweets
 const renderTweets = function (tweets) {
   const $tweet_box = $(".tweet_box");
-
-  $tweet_box.empty();
-
   for (const tweet of tweets) {
     const tweetDiv = createTweetElement(tweet);
-
-    $(".tweet_box").append(tweetDiv);
+    $(".tweet_box").prepend(tweetDiv);
   }
 };
