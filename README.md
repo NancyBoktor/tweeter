@@ -1,10 +1,11 @@
 # TweeterApp Project
 
 TweeterApp is an application that allows users to post tweets and see other people's tweets,
-you can open it on Desktop,  Ipad, Tablet, and Mobile as it is fit for any device, 
-It has secure Preventing XSS  which makes your account safe.
+you can open it on Desktop, Ipad, Tablet, and Mobile as it is fit for any device,
+It has secure Preventing XSS which makes your account safe.
 
 ## Final Product
+
 TweeterApp is displayed on desktop :
 !["Tweetapp_desktop"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_desktop.png?raw=true)
 
@@ -34,8 +35,8 @@ Tweetapp has a hover changing its color when you touch it.
 - Jquery
 
 ## Back-Frontend
-- Ajax
 
+- Ajax
 
 ## Getting Started
 
