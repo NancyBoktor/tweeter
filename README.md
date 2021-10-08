@@ -9,15 +9,19 @@ It has secure Preventing XSS which makes your account safe.
 TweeterApp is displayed on desktop :
 !["Tweetapp_desktop"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_desktop.png?raw=true)
 
+
 TweeterApp is displayed on Tablet :
 
 !["Tweetapp_tablet"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_tablet.png?raw=true)
 
+
 TweeterApp is alerting that your post's character is more than allowable when you press the tweet button.
 !["Tweetapp_maxCharcterAlert"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_maxCharcterAlert.png?raw=true)
 
+
 Tweetapp is alerting that you pressed the tweet button without typing your post or you typed "".
 !["Tweetapp_emptyTextAlert"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_emptyTextAlert.png?raw=true)
+
 
 Tweetapp has a hover changing its color when you touch it.
 !["Tweeapp_hover"](https://github.com/NancyBoktor/tweeter/blob/master/docs/Tweetapp_hover.png?raw=true)
