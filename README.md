@@ -23,6 +23,7 @@ Tweetapp has a hover changing its color when you touch it.
 
 - Express
 - body-parser
+- Chance
 
 ## Frontend
 
