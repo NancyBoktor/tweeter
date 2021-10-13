@@ -32,17 +32,17 @@ $(document).ready(function () {
 
     // conditions before submit the tweet
     if (tweetlength > 140) {
-      $("#alert").css("display", "flex");
+      $("#tweet-limit-alert").css("display", "flex");
 
       return;
-    } else if (tweetValue === '""' || tweetValue === null) {
-      $("#alert2").css("display", "flex");
+    } else if (tweetValue === "") {
+      $("#tweet-empty-alert").css("display", "flex");
 
       return;
     } else {
       // hide the alert
-      $("#alert").css("display", "none");
-      $("#alert2").css("display", "none");
+      $("#tweet-limit-alert").css("display", "none");
+      $("#tweet-empty-alert").css("display", "none");
 
       // if the conditions false then we will submit the tweet for the user using AJAX
       $.ajax({
@@ -51,6 +51,8 @@ $(document).ready(function () {
         //convert data to response
         data: $(this).serialize(),
       }).then(function (res) {
+        $(".main-form").trigger("reset");
+        $("#counter").text(140);
         const tweets = loadTweets();
         const newTweet = tweets[0];
         renderTweets([newTweet]);
@@ -62,7 +64,7 @@ $(document).ready(function () {
 //Making the HTML tweet box dynamic for every single user
 const createTweetElement = function (tweet) {
   const escape = function (str) {
-    let div = document.createElement("div");
+    const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };

@@ -121,7 +121,7 @@
   color: rgb(211, 148, 236);
 }
 
-#alert {
+#tweet-limit-alert {
   display: none;
   flex-direction: row;
   justify-content: center;
@@ -133,7 +133,7 @@
   color: red;
 }
 
-#alert2 {
+#tweet-empty-alert {
   display: none;
   flex-direction: row;
   justify-content: center;
